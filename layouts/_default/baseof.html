@@ -1,0 +1,41 @@
+{{ $description := site.Params.description }}
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }} | Möblierte WG-Zimmer für Studierende{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ $description }}{{ end }}">
+  {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  <link rel="icon" href="/plurum-logo-small.png">
+</head>
+<body>
+  <nav class="nav" aria-label="Hauptnavigation">
+    <a class="brand" href="/#top" aria-label="Plurum Residences Start">
+      <img src="/plurum-logo-small.png" alt="Plurum Logo">
+      <span>Plurum Residences</span>
+    </a>
+    <div class="navLinks">
+      <a href="/#zimmer">Zimmer</a>
+      <a href="/#warum">Warum Plurum</a>
+      <a href="/#ablauf">Ablauf</a>
+      <a class="navCta" href="mailto:{{ site.Params.contactEmail }}">Interesse anmelden</a>
+    </div>
+  </nav>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="footer">
+    <div>
+      <img src="/plurum-logo-small.png" alt="Plurum Logo">
+      <strong>Plurum Residences</strong>
+    </div>
+    <nav aria-label="Footer">
+      <a href="mailto:{{ site.Params.contactEmail }}">Kontakt</a>
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+    </nav>
+  </footer>
+</body>
+</html>

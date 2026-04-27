@@ -1,33 +1,74 @@
 # Runbook
 
+## Architektur
+
+Die öffentliche Plurum-Residences-Marketingseite ist eine statische Hugo-Site.
+
+- Build: Hugo im Docker-Multistage-Build
+- Runtime: Caddy served das generierte `public/`-Verzeichnis
+- Keine Next.js-/Node-Runtime im Container
+
 ## Voraussetzungen
 
-- Node.js 20+
-- npm
+- Docker und Docker Compose
+- Optional: npm nur als Komfort-Wrapper für die Docker-Kommandos
+
+Lokale Hugo-Installation ist nicht erforderlich.
 
 ## Lokal starten
 
 ```bash
-npm install
-npm run dev
+docker compose build
+docker compose up -d
 ```
 
-Standard: <http://localhost:3000>
+Standard: <http://127.0.0.1:13010>
+
+Der Compose-Port ist bewusst so gesetzt:
+
+```yaml
+${WEB_BIND:-0.0.0.0}:${WEB_PORT:-13010}:80
+```
+
+Damit kann der globale Dockerized Caddy die Site über `host.docker.internal:13010` erreichen.
 
 ## Build/Verification
 
 ```bash
-npm run verify
+docker compose config
+docker compose build
+docker compose up -d
+curl http://127.0.0.1:13010/
 ```
 
-## Content-Pflege aktuell
+Optional über npm:
 
-Wohnungs-/Zimmer-Daten liegen vorläufig in `data/properties.ts`.
+```bash
+npm run verify
+npm run docker:up
+```
 
-## Zukünftige Pflege
+## Content-Pflege
 
-Für echte redaktionelle Pflege braucht das Projekt später eine Entscheidung zwischen:
+- Residences: `content/residences/*.md`
+- Zimmer: `content/rooms/*.md`
+- Legal: `content/impressum.md`, `content/datenschutz.md`
+- Anleitung: `docs/content/how-to-add-residences-and-rooms.md`
 
-- Headless CMS
-- Admin-Bereich in dieser App
-- Integration mit der bestehenden Plurum-Residences-App
+Statuswerte:
+
+- `draft`
+- `planned`
+- `available-soon`
+- `available`
+- `reserved`
+- `occupied`
+
+Für nicht öffentliche Entwürfe zusätzlich `draft: true` setzen. Der Produktions-Build nutzt kein `--buildDrafts`.
+
+## Deployment-Hinweise
+
+1. Content und Legal-Daten prüfen.
+2. `docker compose build` ausführen.
+3. Container mit gewünschtem `WEB_PORT` starten.
+4. Globalen Caddy auf `host.docker.internal:<WEB_PORT>` routen lassen.

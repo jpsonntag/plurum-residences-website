@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: plurum-residences-marketing:local
+    ports:
+      # Global Dockerized Caddy reaches the host through host.docker.internal,
+      # which cannot access loopback-only host bindings on Linux.
+      - "${WEB_BIND:-0.0.0.0}:${WEB_PORT:-13010}:80"
+    restart: unless-stopped

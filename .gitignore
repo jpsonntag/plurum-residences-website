@@ -2,6 +2,9 @@ node_modules/
 .next/
 out/
 dist/
+public/
+resources/
+.hugo_build.lock
 tsconfig.tsbuildinfo
 .env
 .env*.local

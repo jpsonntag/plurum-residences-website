@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="section pageContent">
+  <p class="eyebrow">{{ .Section | humanize }}</p>
+  <h1>{{ .Title }}</h1>
+  {{ if or (eq .Section "residences") (eq .Section "rooms") }}
+    <div class="detailMeta">
+      {{ with .Params.status }}<span class="badge">{{ partial "status-label.html" . }}</span>{{ end }}
+      {{ with .Params.city }}<span>{{ . }}</span>{{ end }}
+      {{ with .Params.district }}<span>{{ . }}</span>{{ end }}
+      {{ with .Params.residenceId }}<span>Residence: {{ . }}</span>{{ end }}
+      {{ with .Params.size }}<span>{{ . }}</span>{{ end }}
+      {{ with .Params.rent }}<span>{{ . }}</span>{{ end }}
+    </div>
+    {{ with .Params.highlights }}<div class="chips detailChips">{{ range . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
+  {{ end }}
+  <article class="prose">
+    {{ .Content }}
+  </article>
+  <p class="backLink"><a href="/#zimmer">← Zurück zur Übersicht</a></p>
+</section>
+{{ end }}

@@ -1,0 +1,169 @@
+{{ define "main" }}
+{{ $residences := where (where site.RegularPages "Section" "residences") ".Params.status" "ne" "draft" }}
+{{ $rooms := where (where site.RegularPages "Section" "rooms") ".Params.status" "ne" "draft" }}
+
+<section class="hero" id="top">
+  <div class="heroCopy">
+    <p class="eyebrow">Möblierte WG-Zimmer für Studierende</p>
+    <h1>Einfacher wohnen. Besser ankommen.</h1>
+    <p class="lead">
+      Plurum Residences vermittelt möblierte WG-Zimmer in gepflegten Wohnungen — mit klaren Informationen, strukturierter Anfrage und verlässlicher Kommunikation bis zum Einzug.
+    </p>
+    <div class="actions">
+      <a class="button primary" href="#zimmer">Zimmer ansehen</a>
+      <a class="button secondary" href="mailto:{{ site.Params.contactEmail }}">Interesse anmelden</a>
+    </div>
+  </div>
+
+  <div class="heroVisual" aria-label="Plurum Residences Markenerlebnis">
+    <div class="visualTopline">
+      <span>Plurum Residences</span>
+      <span>2026</span>
+    </div>
+    <div class="brandScene">
+      <div class="brandHalo"></div>
+      <img class="brandMarkLarge" src="/plurum-logo.png" alt="Plurum Logo" />
+      <div class="brandPill one">Möbliert</div>
+      <div class="brandPill two">Klare Anfrage</div>
+      <div class="brandPill three">Gepflegte WGs</div>
+    </div>
+    <div class="availabilityCard">
+      <span class="pulse"></span>
+      <div>
+        <strong>Neue Zimmer in Vorbereitung</strong>
+        <small>Frühzeitig vormerken und Updates erhalten</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trustStrip" aria-label="Plurum Versprechen">
+  <article>
+    <strong>Möbliert einziehen</strong>
+    <span>Zimmer mit sinnvoller Grundausstattung, damit der Start in Studium und Alltag leichter wird.</span>
+  </article>
+  <article>
+    <strong>Klar anfragen</strong>
+    <span>Alle relevanten Angaben werden strukturiert aufgenommen — ohne endlose Nachrichtenschleifen.</span>
+  </article>
+  <article>
+    <strong>Verlässlich begleitet</strong>
+    <span>Transparente Kommunikation vom ersten Interesse bis zur Übergabe.</span>
+  </article>
+</section>
+
+<section class="section residences" id="zimmer">
+  <div class="sectionHeader">
+    <p class="eyebrow">Residences</p>
+    <h2>Aktuelle und kommende WG-Zimmer</h2>
+    <p class="sectionLead">
+      Hier findest du verfügbare und geplante Zimmer von Plurum Residences. Jedes Angebot wird mit Ausstattung, Lage, Status und nächsten Schritten übersichtlich dargestellt.
+    </p>
+  </div>
+
+  <div class="cards residenceGrid">
+    {{ range sort $residences ".Params.weight" }}
+      <article class="residenceCard">
+        <div class="residenceImage">
+          <span>{{ .Params.availability | default (partial "status-label.html" .Params.status) }}</span>
+        </div>
+        <div class="residenceBody">
+          <span class="badge">{{ partial "status-label.html" .Params.status }}</span>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Params.teaser | default .Summary }}</p>
+          <dl>
+            <div><dt>Ort</dt><dd>{{ .Params.city | default "In Vorbereitung" }}</dd></div>
+            <div><dt>Rahmen</dt><dd>{{ .Params.district | default "Campusnah geplant" }}</dd></div>
+            <div><dt>Zimmer</dt><dd>{{ .Params.rooms | default "—" }}</dd></div>
+          </dl>
+          {{ with .Params.highlights }}
+            <div class="chips">
+              {{ range . }}<span>{{ . }}</span>{{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </article>
+    {{ else }}
+      <article class="emptyCard">
+        <h3>Residences werden vorbereitet</h3>
+        <p>Die ersten Wohnungen werden aktuell redaktionell aufbereitet. Neue Einträge entstehen in <code>content/residences/</code>.</p>
+      </article>
+    {{ end }}
+  </div>
+
+  <div class="sectionHeader roomHeader">
+    <p class="eyebrow">Zimmer</p>
+    <h2>Zimmer im Überblick</h2>
+    <p class="sectionLead">Die Zimmer werden aus Markdown-Dateien in <code>content/rooms/</code> erzeugt und über <code>residenceId</code> einer Residence zugeordnet.</p>
+  </div>
+  <div class="cards roomGrid">
+    {{ range sort $rooms ".Params.weight" }}
+      <article class="roomCard">
+        <span class="badge">{{ partial "status-label.html" .Params.status }}</span>
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Params.teaser | default .Summary }}</p>
+        <dl>
+          <div><dt>Residence</dt><dd>{{ .Params.residenceId | default "—" }}</dd></div>
+          <div><dt>Größe</dt><dd>{{ .Params.size | default "—" }}</dd></div>
+          <div><dt>Miete</dt><dd>{{ .Params.rent | default "auf Anfrage" }}</dd></div>
+        </dl>
+        {{ with .Params.highlights }}<div class="chips">{{ range . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
+      </article>
+    {{ else }}
+      <article class="emptyCard">
+        <h3>Zimmer werden vorbereitet</h3>
+        <p>Konkrete Zimmer erscheinen hier, sobald die Daten final genug für die öffentliche Startseite sind. Entwürfe können bereits als Markdown-Dateien vorbereitet werden.</p>
+      </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="darkSection" id="warum">
+  <div class="sectionHeader narrow">
+    <p class="eyebrow light">Warum Plurum Residences</p>
+    <h2>Mehr Überblick beim WG-Suchen.</h2>
+    <p class="sectionLead lightLead">
+      Ein Zimmer zu finden sollte nicht an unklaren Informationen, verstreuten Nachrichten oder fehlender Transparenz scheitern. Plurum Residences bündelt die wichtigsten Details und macht den Weg zur Anfrage einfacher.
+    </p>
+  </div>
+  <div class="benefitGrid">
+    <article class="benefit"><span>01</span><h3>Klare Informationen</h3><p>Ausstattung, Lage, Status und Ablauf werden so früh wie möglich verständlich dargestellt.</p></article>
+    <article class="benefit"><span>02</span><h3>Bereit für den Alltag</h3><p>Möblierte Zimmer schaffen eine stabile Basis für Lernen, Leben und Ankommen.</p></article>
+    <article class="benefit"><span>03</span><h3>Gepflegte Wohnumgebung</h3><p>Der Fokus liegt auf ordentlich vorbereiteten Wohnungen statt anonymen Inseraten.</p></article>
+    <article class="benefit"><span>04</span><h3>Strukturierter Prozess</h3><p>Von der Anfrage bis zur Rückmeldung gibt es klare nächste Schritte.</p></article>
+  </div>
+</section>
+
+<section class="section split" id="ablauf">
+  <div>
+    <p class="eyebrow">So funktioniert’s</p>
+    <h2>Vom ersten Interesse bis zum Einzug — klar geführt.</h2>
+    <p class="sectionLead">Der Ablauf ist bewusst einfach gehalten: schnell verstehen, ob ein Zimmer passt, Interesse anmelden und die nächsten Schritte sauber klären.</p>
+  </div>
+  <ol class="steps">
+    <li><span class="stepNum">01</span><strong>Angebot entdecken</strong><span>Sieh dir verfügbare und kommende WG-Zimmer mit Ausstattung, Lageinformationen und Status an.</span></li>
+    <li><span class="stepNum">02</span><strong>Interesse anmelden</strong><span>Übermittle deine Anfrage mit den wichtigsten Angaben zu dir, deinem Studienstart und deinem gewünschten Zeitraum.</span></li>
+    <li><span class="stepNum">03</span><strong>Rückmeldung erhalten</strong><span>Wir prüfen die Anfrage und melden uns mit den nächsten Schritten — transparent und direkt.</span></li>
+    <li><span class="stepNum">04</span><strong>Einziehen</strong><span>Wenn alles passt, erhältst du eine klare Übergabe und ein vorbereitetes Zimmer für deinen Start.</span></li>
+  </ol>
+</section>
+
+<section class="audience">
+  <div class="audienceCopy">
+    <p class="eyebrow">Gut zu wissen</p>
+    <h2>Ein klarer Rahmen für den Start in einer neuen Stadt.</h2>
+    <p>Plurum Residences richtet sich an Studierende, die ein möbliertes Zimmer in einer gut organisierten WG suchen. Transparente Informationen, strukturierte Abläufe und verlässliche Kommunikation machen den Prozess auch für Eltern nachvollziehbar.</p>
+  </div>
+  <div class="audiencePanels">
+    <article><h3>Für Studierende</h3><ul><li>möblierte Zimmer</li><li>einfache Anfrage</li><li>schneller Überblick</li><li>weniger organisatorischer Aufwand</li></ul></article>
+    <article><h3>Auch für Eltern nachvollziehbar</h3><ul><li>transparenter Ablauf</li><li>gepflegte Wohnumgebung</li><li>klare Kommunikation</li><li>seriöser Markenauftritt</li></ul></article>
+  </div>
+</section>
+
+<section class="cta" id="kontakt">
+  <p class="eyebrow light">Interesse anmelden</p>
+  <h2>Suchst du ein möbliertes WG-Zimmer?</h2>
+  <p>Melde dich bei Plurum Residences, wenn du dich für aktuelle oder kommende Zimmer interessierst. Wir informieren dich über Verfügbarkeit, Ausstattung und die nächsten Schritte.</p>
+  <a class="button primary lightButton" href="mailto:{{ site.Params.contactEmail }}">Interesse anmelden</a>
+</section>
+{{ end }}

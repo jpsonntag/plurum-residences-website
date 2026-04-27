@@ -2,11 +2,10 @@ stages:
   - verify
 
 verify:
-  image: node:20
+  image: hugomods/hugo:exts-0.125.7
   stage: verify
   script:
-    - npm ci
-    - npm run verify
+    - hugo --minify --gc --destination public
   rules:
     - if: $CI_PIPELINE_SOURCE == "push"
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"

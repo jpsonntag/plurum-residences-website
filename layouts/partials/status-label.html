@@ -1,0 +1,9 @@
+{{- $status := . -}}
+{{- if eq $status "available-soon" -}}Bald verfügbar
+{{- else if eq $status "planned" -}}In Planung
+{{- else if eq $status "available" -}}Verfügbar
+{{- else if eq $status "reserved" -}}Reserviert
+{{- else if eq $status "occupied" -}}Aktuell belegt
+{{- else if eq $status "draft" -}}Entwurf
+{{- else -}}Status offen
+{{- end -}}

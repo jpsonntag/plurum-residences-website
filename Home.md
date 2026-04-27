@@ -8,15 +8,16 @@
 
 - Produktkontext: `docs/context/project-brief.md`
 - Delivery-Status: `docs/delivery/status.md`
+- Content-Anleitung: `docs/content/how-to-add-residences-and-rooms.md`
 - Nächste Session: [[99 Inbox/Next Session]]
 - Offene Fragen: [[99 Inbox/Open Questions]]
 - Runbook: `ops/runbook.md`
 
 ## Technische Baseline
 
-- Next.js App Router
-- TypeScript
-- statische Startseite mit vorbereiteter Residence-Datenstruktur
+- Hugo Static Site ohne Theme-Abhängigkeit
+- Docker-Multistage-Build mit Hugo und Caddy
+- Markdown-Content in `content/residences/`, `content/rooms/`, `content/impressum.md`, `content/datenschutz.md`
 - Logo aus dem bestehenden Plurum-Residences/Plurum-Rent Repo übernommen
 
 ## Markenrichtung

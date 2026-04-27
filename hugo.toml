@@ -1,0 +1,13 @@
+baseURL = "https://plurum.de/"
+languageCode = "de-de"
+title = "Plurum Residences"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Möblierte WG-Zimmer für Studierende: Plurum Residences bietet klare Informationen, gepflegte Wohnungen und einen einfachen Anfrageprozess bis zum Einzug."
+  contactEmail = "hello@plurum.de"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
