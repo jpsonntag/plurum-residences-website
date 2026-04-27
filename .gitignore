@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+dist/
+tsconfig.tsbuildinfo
+.env
+.env*.local
+.DS_Store
+Thumbs.db
+.vercel/
+.obsidian/workspace.json
+.obsidian/workspaces.json
+.obsidian/cache/
+.obsidian/plugins/
+.obsidian/graph.json

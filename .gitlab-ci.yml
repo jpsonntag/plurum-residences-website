@@ -1,0 +1,12 @@
+stages:
+  - verify
+
+verify:
+  image: node:20
+  stage: verify
+  script:
+    - npm ci
+    - npm run verify
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
