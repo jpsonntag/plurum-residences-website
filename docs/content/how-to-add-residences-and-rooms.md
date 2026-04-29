@@ -182,6 +182,7 @@ size: "16 m²"
 rent: "690 € warm"
 teaser: "Kurzer Zimmertext für Startseite und Übersichten."
 highlights: ["Bett", "Schreibtisch", "Schrank"]
+thumbnail: "/images/residences/beispielstrasse-01/room-a.webp"
 images:
   - src: "/images/residences/beispielstrasse-01/room-a.webp"
     alt: "Möbliertes Zimmer A in der WG Beispielstraße"
@@ -202,7 +203,17 @@ Details zum Zimmer, Ausstattung, Ablauf und Hinweise.
 - Zugang zu Küche und Bad
 ```
 
-### 3. Residence-Verknüpfung prüfen
+### 3. Zimmer-Thumbnail festlegen
+
+Optional kann auch das Card-Thumbnail eines Zimmers explizit gesetzt werden:
+
+```yaml
+thumbnail: "/images/residences/beispielstrasse-01/room-a.webp"
+```
+
+Wenn `thumbnail` fehlt, nutzt die Startseite und die Residence-Detailseite automatisch das erste Bild aus `images`. Wenn weder `thumbnail` noch `images` gesetzt sind, erscheint die Zimmer-Card ohne Bildbereich.
+
+### 4. Residence-Verknüpfung prüfen
 
 Wichtig ist diese Zeile:
 
@@ -218,7 +229,7 @@ id: "beispielstrasse-01"
 
 Nur dann erscheint das Zimmer automatisch auf der Detailseite der zugehörigen Residence.
 
-### 4. Ergebnis prüfen
+### 5. Ergebnis prüfen
 
 Das Zimmer erscheint automatisch:
 
@@ -338,7 +349,7 @@ python scripts/verify_detail_pages.py
 - [ ] Jedes Zimmer hat `contentType: "room"`.
 - [ ] `residenceId` jedes Zimmers passt exakt zur `id` der Residence.
 - [ ] Bilder liegen unter `static/images/residences/<residence-id>/`.
-- [ ] Optionales Residence-Thumbnail ist über `thumbnail: "/images/residences/<residence-id>/<dateiname>"` gesetzt oder das erste `images`-Bild ist als Fallback geeignet.
+- [ ] Optionales Card-Thumbnail ist über `thumbnail: "/images/residences/<residence-id>/<dateiname>"` gesetzt oder das erste `images`-Bild ist als Fallback geeignet.
 - [ ] Jedes Bild hat ein sinnvolles `alt`.
 - [ ] Status ist korrekt gesetzt.
 - [ ] Entwürfe haben zusätzlich `draft: true`.

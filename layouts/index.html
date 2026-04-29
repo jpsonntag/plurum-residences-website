@@ -100,17 +100,23 @@
   </div>
   <div class="cards roomGrid">
     {{ range sort $rooms ".Params.weight" }}
+      {{ $thumbnail := partial "card-thumbnail.html" . }}
       <a class="roomCard cardLinkBlock{{ if eq .Params.status "occupied" }} isOccupied{{ end }}" href="{{ .RelPermalink }}" aria-label="Details zu {{ .Title }} ansehen">
-        <span class="badge">{{ partial "status-label.html" .Params.status }}</span>
-        <h3>{{ .Title }}</h3>
-        <p>{{ .Params.teaser | default .Summary }}</p>
-        <dl>
-          <div><dt>Residence</dt><dd>{{ .Params.residenceId | default "—" }}</dd></div>
-          <div><dt>Größe</dt><dd>{{ .Params.size | default "—" }}</dd></div>
-          <div><dt>Miete</dt><dd>{{ .Params.rent | default "auf Anfrage" }}</dd></div>
-        </dl>
-        {{ with .Params.highlights }}<div class="chips">{{ range . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
-        <span class="cardLink">Details ansehen</span>
+        {{ with $thumbnail }}
+          <div class="roomImage hasThumbnail" style="background-image: linear-gradient(180deg, rgba(13,40,41,.02), rgba(13,40,41,.38)), url('{{ . }}');"></div>
+        {{ end }}
+        <div class="roomBody">
+          <span class="badge">{{ partial "status-label.html" .Params.status }}</span>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Params.teaser | default .Summary }}</p>
+          <dl>
+            <div><dt>Residence</dt><dd>{{ .Params.residenceId | default "—" }}</dd></div>
+            <div><dt>Größe</dt><dd>{{ .Params.size | default "—" }}</dd></div>
+            <div><dt>Miete</dt><dd>{{ .Params.rent | default "auf Anfrage" }}</dd></div>
+          </dl>
+          {{ with .Params.highlights }}<div class="chips">{{ range . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
+          <span class="cardLink">Details ansehen</span>
+        </div>
       </a>
     {{ else }}
       <article class="emptyCard">

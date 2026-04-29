@@ -87,7 +87,10 @@ h3 { margin-bottom: 12px; font-size: 1.35rem; letter-spacing: -0.04em; }
 .cardLinkBlock.isOccupied:hover, .cardLinkBlock.isOccupied:focus-visible { opacity: .74; filter: grayscale(.55); }
 .cardLinkBlock:hover h3, .cardLinkBlock:focus-visible h3 { text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.14em; }
 .cardLinkBlock:hover .cardLink::after, .cardLinkBlock:focus-visible .cardLink::after { transform: translateX(4px); }
-.roomCard, .emptyCard { padding: clamp(24px, 4vw, 34px); }
+.roomCard { padding: 0; }
+.emptyCard { padding: clamp(24px, 4vw, 34px); }
+.roomBody { padding: clamp(24px, 4vw, 34px); }
+.roomImage { min-height: 190px; background-size: cover; background-position: center; background-repeat: no-repeat; }
 .residenceImage { min-height: 270px; display: flex; align-items: flex-end; padding: 24px; background: radial-gradient(circle at 72% 28%, rgba(244,241,232,.9) 0 16%, transparent 17%), linear-gradient(135deg, #0D2829 0%, rgba(13,40,41,.82) 55%, rgba(244,241,232,.24) 100%); }
 .residenceImage.hasThumbnail { background-size: cover; background-position: center; background-repeat: no-repeat; }
 .residenceImage span { border-radius: 999px; padding: 9px 13px; background: rgba(244,241,232,.9); color: var(--ink); font-weight: 780; }

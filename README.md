@@ -21,7 +21,7 @@ Kurzfassung:
 - Zimmer: `content/residences/<residence-id>/rooms/<room-slug>.md`
 - Bilder: `static/images/residences/<residence-id>/`
 - Bildpfade in Frontmatter: `/images/residences/<residence-id>/<dateiname>`
-- optionales Residence-Card-Thumbnail: `thumbnail: "/images/residences/<residence-id>/<dateiname>"`
+- optionales Card-Thumbnail für Residences und Zimmer: `thumbnail: "/images/residences/<residence-id>/<dateiname>"`
 - Zimmer referenzieren ihre Residence zusätzlich per `residenceId`
 - Statuswerte: `draft`, `planned`, `available-soon`, `available`, `reserved`, `occupied`
 - Entwürfe zusätzlich mit `draft: true` markieren; normale Produktions-Builds rendern sie nicht.
