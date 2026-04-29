@@ -2,6 +2,12 @@
 
 Initiale Marketing-Website für Plurum Residences als öffentlicher Hub.
 
-Aktueller Fokus: Businessplan-nahe Schärfung der öffentlichen Copy ohne Scope-Creep. Die Website soll bezugsfertig vorbereitete möblierte WG-Zimmer, transparente Informationen und einen strukturierten Anfrageprozess kommunizieren.
+Aktueller Fokus: echte Residences/Zimmer mit Bildern sauber pflegen und die Website für einen ersten produktionsnahen Auftritt unter `residences.plurum.de` vorbereiten.
 
-Nicht im aktuellen Scope: vollständiges CMS, Auth, Upload-Backend, produktives Deployment.
+Relevante Artefakte:
+- `docs/content/how-to-add-residences-and-rooms.md`
+- `content/residences/<residence-id>/_index.md`
+- `content/residences/<residence-id>/rooms/*.md`
+- `static/images/residences/<residence-id>/`
+
+Nicht im aktuellen Scope: vollständiges CMS, Auth, Upload-Backend, produktives Deployment-Automation.

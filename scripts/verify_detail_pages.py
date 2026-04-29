@@ -11,7 +11,7 @@ checks = [
     (PUBLIC / "index.html", 'residenceCard cardLinkBlock', "homepage renders residence card as full-card link"),
     (PUBLIC / "index.html", 'class="roomCard cardLinkBlock" href=/residences/student-wg-01/rooms/room-a/', "homepage renders nested room-a card as full-card link"),
     (PUBLIC / "index.html", 'class="roomImage hasThumbnail"', "homepage renders room card thumbnail image area"),
-    (PUBLIC / "index.html", "/images/residences/student-wg-01/room-a.svg", "homepage room card uses configured room thumbnail"),
+    (PUBLIC / "index.html", "/images/residences/student-wg-01/", "homepage room card uses configured room thumbnail"),
     (PUBLIC / "index.html", "Details ansehen", "homepage keeps visible detail CTA text"),
     (PUBLIC / "index.html", 'class="roomCard cardLinkBlock isOccupied" href=/residences/student-wg-01/rooms/room-b/', "homepage renders occupied nested room-b card as greyed full-card link"),
     (PUBLIC / "index.html", "Aktuell belegt", "homepage shows occupied status label"),

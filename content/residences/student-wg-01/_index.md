@@ -1,16 +1,17 @@
 ---
-title: "Plurum Pilot-WG Karlsruhe"
+title: "Plurum Antik-WG Karlsruhe"
 id: "student-wg-01"
 contentType: "residence"
-status: "available-soon"
+status: "occupied"
 city: "Karlsruhe"
 district: "Campusnah geplant"
 rooms: 4
 availability: "Neue Zimmer in Vorbereitung"
 teaser: "Die ersten Plurum Residences werden als möblierte Studierenden-WGs vorbereitet. Lass dich früh vormerken und erhalte Informationen zu Lage, Ausstattung, Mietrahmen und Verfügbarkeit, sobald die Details final geprüft sind."
 highlights: ["Bezugsfertig vorbereitet", "Möbliertes Zimmer", "Klare Anfrage", "Transparente Informationen"]
+thumbnail: "/images/residences/student-wg-01/Sonntag-2.jpg"
 images:
-  - src: "/images/residences/student-wg-01/living-room.svg"
+  - src: "/images/residences/student-wg-01/Sonntag-2.jpg"
     alt: "Wohnbereich einer vorbereiteten Plurum Pilot-WG"
     caption: "Beispielhafte Wohnatmosphäre der Plurum Pilot-WG"
   - src: "/images/residences/student-wg-01/kitchen.svg"

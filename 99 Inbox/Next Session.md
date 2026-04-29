@@ -3,23 +3,25 @@
 ## Letzter Stand
 - Plurum Residences Marketing ist eine Hugo-Static-Site mit Docker/Caddy Runtime.
 - Produktive Domain ist `residences.plurum.de`; `plurum.de` kann optional darauf weiterleiten.
-- Businessplan 2.0 wurde extrahiert und marketingrelevant ausgewertet; öffentliche Website-Copy ist stärker auf „Einfach einziehen. Besser ankommen.“, bezugsfertig vorbereitete WG-Zimmer, transparente Informationen und strukturierte Anfrage ausgerichtet.
-- Residences und Rooms können als verschachtelte Markdown-Dateien unter `content/residences/<residence-id>/` erstellt werden; sie erscheinen als Cards und haben eigene Detailseiten mit Bildergalerien aus `images`-Frontmatter. Residence-Detailseiten zeigen ihre zugehörigen Rooms; Room-Detailseiten verlinken zurück zur Residence. Belegte Einträge bleiben sichtbar, werden auf Übersichtsseiten ausgegraut und bleiben anklickbar.
-- Der Marken-Dunkelton ist `#0D2829`.
-- Der abgestimmte helle Ivory-/Weißton ist jetzt `#F4F1E8`; CSS und Hero-SVG sind konsistent darauf umgestellt.
-- Wohnungsbilder werden im MVP statisch mit der Website ausgeliefert und im Docker-Build gebundelt.
-- Lokale Verifikation war erfolgreich: `docker compose config`, `docker compose build`, `docker compose up -d`, lokale Seite `http://127.0.0.1:13010/`, HTML-Checks für neue Copy.
+- Businessplan-nahe öffentliche Copy ist auf „Einfach einziehen. Besser ankommen.“, bezugsfertig vorbereitete WG-Zimmer, transparente Informationen und strukturierte Anfrage ausgerichtet.
+- Residences und Rooms werden verschachtelt unter `content/residences/<residence-id>/` gepflegt und erscheinen als Cards, Detailseiten und Bildergalerien.
+- Residence-Detailseiten zeigen zugehörige Rooms; Room-Detailseiten verlinken zurück zur Residence. Belegte Einträge bleiben sichtbar, ausgegraut und anklickbar.
+- Bilder werden im MVP statisch unter `static/images/residences/<residence-id>/` mit der Website ausgeliefert und im Docker-Build gebundelt.
+- Card-Thumbnails sind für Residences und Zimmer über `thumbnail: "/images/residences/<residence-id>/<dateiname>"` steuerbar; Fallback ist jeweils das erste Bild aus `images`.
+- Pflege-How-to ist dokumentiert in `docs/content/how-to-add-residences-and-rooms.md`.
+- Aktueller Beispielcontent nutzt `student-wg-01` / „Plurum Antik-WG Karlsruhe“ mit Bild `static/images/residences/student-wg-01/Sonntag-2.jpg` als Residence- und Room-A-Thumbnail.
 
 ## Offene Richtungen
 - Finale Inhalte: echte Wohnungs-/Zimmerdaten, finale Bilder/Assets und rechtliche Angaben ergänzen.
-- Visuelle Feinabstimmung bei Bedarf im Browser gegen echte Assets prüfen.
+- Finale öffentliche Kontakt-E-Mail festlegen und in Navigation/Footer/CTA einsetzen.
+- Visuelle Feinabstimmung mit echten Fotos im Browser prüfen.
 - Später entscheiden, ob/wo eine dynamische App oder CMS/Admin-Strecke ergänzt wird.
 
 ## Nächster sinnvoller Einstieg
-1. Finale Kontakt-E-Mail festlegen; Empfehlung bleibt `wohnen@plurum.de` plus Alias `residences@plurum.de`.
-2. Echte Legal-Daten für Impressum/Datenschutz ergänzen und prüfen lassen.
-3. Inhalte in `content/residences/<residence-id>/_index.md` und `content/residences/<residence-id>/rooms/*.md` mit echten Daten/Bildern weiter pflegen.
-4. Design-Tokens in `assets/css/main.css` nur konsistent über `#0D2829` und `#F4F1E8` weiterentwickeln.
+1. Repo öffnen und zuerst diese Dateien lesen: `Home.md`, `99 Inbox/Current Focus.md`, `99 Inbox/Open Questions.md`, `docs/content/how-to-add-residences-and-rooms.md`.
+2. Lokale Site starten: `docker compose up -d` und `http://127.0.0.1:13010/` prüfen.
+3. Mit echten Assets/Content weiterarbeiten: `content/residences/student-wg-01/_index.md`, `content/residences/student-wg-01/rooms/room-a.md`, `static/images/residences/student-wg-01/`.
+4. Falls neue Residences/Zimmer angelegt werden: How-to befolgen und anschließend `docker compose build` plus `python scripts/verify_detail_pages.py` ausführen.
 
 ## Merksatz für den Wiedereinstieg
-Marketing-Site ist technisch lauffähig, produktiv auf `residences.plurum.de` ausgerichtet und aus dem Businessplan heraus auf „Einfach einziehen. Besser ankommen.“ geschärft; nächster Hebel sind echte Legal-Daten, finale Kontakt-E-Mail, echte Wohnungs-/Zimmerdaten und finale Assets.
+Die Marketing-Site ist technisch lauffähig, strukturell dokumentiert und unterstützt jetzt statisch ausgelieferte Bilder inklusive steuerbarer Card-Thumbnails für Residences und Zimmer; nächster Hebel sind echte Legal-Daten, finale Kontakt-E-Mail und weitere echte Wohnungs-/Zimmerinhalte.

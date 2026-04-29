@@ -8,6 +8,7 @@ size: "ca. 14–18 m²"
 rent: "auf Anfrage"
 teaser: "Möbliertes WG-Zimmer in einer vorbereiteten Plurum Residence — mit funktionaler Grundausstattung, klarer Anfrage und weiteren Details nach finaler Prüfung."
 highlights: ["Möbliert", "Schreibtisch geplant", "Früh vormerken"]
+thumbnail: "/images/residences/student-wg-01/Sonntag-2.jpg"
 images:
   - src: "/images/residences/student-wg-01/room-a.svg"
     alt: "Beispielbild für Zimmer A in der Plurum Pilot-WG"
