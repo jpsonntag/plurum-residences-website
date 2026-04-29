@@ -8,6 +8,13 @@ rooms: 4
 availability: "Neue Zimmer in Vorbereitung"
 teaser: "Die ersten Plurum Residences werden als möblierte Studierenden-WGs vorbereitet. Lass dich früh vormerken und erhalte Informationen zu Lage, Ausstattung, Mietrahmen und Verfügbarkeit, sobald die Details final geprüft sind."
 highlights: ["Bezugsfertig vorbereitet", "Möbliertes Zimmer", "Klare Anfrage", "Transparente Informationen"]
+images:
+  - src: "/images/residences/student-wg-01/living-room.svg"
+    alt: "Wohnbereich einer vorbereiteten Plurum Pilot-WG"
+    caption: "Beispielhafte Wohnatmosphäre der Plurum Pilot-WG"
+  - src: "/images/residences/student-wg-01/kitchen.svg"
+    alt: "Küche einer möblierten Studierenden-WG"
+    caption: "Gemeinschaftsflächen werden klar dokumentiert"
 weight: 10
 ---
 

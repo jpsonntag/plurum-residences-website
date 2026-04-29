@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Zimmer A Plurum Pilot-WG</title>
+  <desc id="desc">Abstrakte Illustration eines möblierten WG-Zimmers im Plurum-Design.</desc>
+  <rect width="1200" height="800" fill="#F4F1E8"/>
+  <rect x="100" y="100" width="1000" height="600" rx="52" fill="#0D2829" opacity="0.12"/>
+  <rect x="180" y="210" width="420" height="250" rx="36" fill="#0D2829"/>
+  <rect x="250" y="270" width="280" height="80" rx="22" fill="#F4F1E8" opacity="0.9"/>
+  <rect x="690" y="190" width="210" height="360" rx="30" fill="#0D2829"/>
+  <rect x="750" y="250" width="90" height="170" rx="20" fill="#F4F1E8" opacity="0.9"/>
+  <path d="M210 590h780" stroke="#0D2829" stroke-width="20" stroke-linecap="round" opacity="0.34"/>
+  <text x="600" y="670" text-anchor="middle" font-family="system-ui, sans-serif" font-size="42" font-weight="800" fill="#0D2829">Zimmer A</text>
+</svg>

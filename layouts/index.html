@@ -63,7 +63,7 @@
 
   <div class="cards residenceGrid">
     {{ range sort $residences ".Params.weight" }}
-      <article class="residenceCard">
+      <a class="residenceCard cardLinkBlock" href="{{ .RelPermalink }}" aria-label="Details zu {{ .Title }} ansehen">
         <div class="residenceImage">
           <span>{{ .Params.availability | default (partial "status-label.html" .Params.status) }}</span>
         </div>
@@ -81,8 +81,9 @@
               {{ range . }}<span>{{ . }}</span>{{ end }}
             </div>
           {{ end }}
+          <span class="cardLink">Details ansehen</span>
         </div>
-      </article>
+      </a>
     {{ else }}
       <article class="emptyCard">
         <h3>Residences werden vorbereitet</h3>
@@ -98,7 +99,7 @@
   </div>
   <div class="cards roomGrid">
     {{ range sort $rooms ".Params.weight" }}
-      <article class="roomCard">
+      <a class="roomCard cardLinkBlock" href="{{ .RelPermalink }}" aria-label="Details zu {{ .Title }} ansehen">
         <span class="badge">{{ partial "status-label.html" .Params.status }}</span>
         <h3>{{ .Title }}</h3>
         <p>{{ .Params.teaser | default .Summary }}</p>
@@ -108,7 +109,8 @@
           <div><dt>Miete</dt><dd>{{ .Params.rent | default "auf Anfrage" }}</dd></div>
         </dl>
         {{ with .Params.highlights }}<div class="chips">{{ range . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
-      </article>
+        <span class="cardLink">Details ansehen</span>
+      </a>
     {{ else }}
       <article class="emptyCard">
         <h3>Zimmer werden vorbereitet</h3>

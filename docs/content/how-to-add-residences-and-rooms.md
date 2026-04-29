@@ -1,6 +1,6 @@
 # Residences und Zimmer pflegen
 
-Die öffentliche Plurum-Website ist jetzt eine statische Hugo-Site. Residences und Zimmer werden als Markdown-Dateien gepflegt.
+Die öffentliche Plurum-Website ist eine statische Hugo-Site. Residences und Zimmer werden als Markdown-Dateien gepflegt und erscheinen automatisch als Cards auf der Startseite sowie als eigene Detailseiten.
 
 ## Statuswerte
 
@@ -26,6 +26,20 @@ Empfohlene Ablage:
 
 Beispielpfad: `static/images/residences/beispielstrasse-01/zimmer-1.webp`.
 
+Bilder werden pro Residence oder Zimmer über `images` in der Frontmatter gepflegt:
+
+```yaml
+images:
+  - src: "/images/residences/beispielstrasse-01/wohnzimmer.webp"
+    alt: "Wohnbereich der WG Beispielstraße"
+    caption: "Gemeinschaftlicher Wohnbereich"
+  - src: "/images/residences/beispielstrasse-01/zimmer-1.webp"
+    alt: "Möbliertes Zimmer 1"
+    caption: "Zimmer 1 mit Bett, Schreibtisch und Stauraum"
+```
+
+`alt` ist wichtig für Barrierefreiheit und SEO. `caption` ist optional, wird aber empfohlen.
+
 ## Neue Residence anlegen
 
 Datei unter `content/residences/meine-residence.md` erstellen:
@@ -41,6 +55,10 @@ rooms: 4
 availability: "Bald verfügbar"
 teaser: "Kurzer Text für die Startseite."
 highlights: ["Möbliert", "Gepflegte Wohnung", "Gute Anbindung"]
+images:
+  - src: "/images/residences/beispielstrasse-01/wohnzimmer.webp"
+    alt: "Wohnzimmer der WG Beispielstraße"
+    caption: "Gemeinschaftsbereich"
 weight: 10
 ---
 
@@ -48,6 +66,8 @@ Ausführlicher Beschreibungstext für die Detailseite.
 ```
 
 Wichtig: `id` ist die stabile Referenz, die Zimmer über `residenceId` nutzen.
+
+Die Residence erscheint als Card auf der Startseite und unter `/residences/`. Die Detailseite liegt unter `/residences/meine-residence/`.
 
 ## Neues Zimmer anlegen
 
@@ -63,11 +83,17 @@ size: "16 m²"
 rent: "690 € warm"
 teaser: "Kurzer Zimmertext für die Startseite."
 highlights: ["Bett", "Schreibtisch", "Schrank"]
+images:
+  - src: "/images/residences/beispielstrasse-01/zimmer-1.webp"
+    alt: "Möbliertes Zimmer 1 in der WG Beispielstraße"
+    caption: "Zimmer 1"
 weight: 10
 ---
 
 Details zum Zimmer, Ausstattung, Ablauf und Hinweise.
 ```
+
+Das Zimmer erscheint als Card auf der Startseite und unter `/rooms/`. Die Detailseite liegt unter `/rooms/mein-zimmer/`.
 
 ## Entwürfe
 

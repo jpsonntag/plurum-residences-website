@@ -1,0 +1,25 @@
+{{ with .Params.images }}
+  <section class="detailGallery" aria-label="Bildergalerie">
+    {{ range . }}
+      {{ $src := "" }}
+      {{ $alt := "" }}
+      {{ $caption := "" }}
+      {{ if reflect.IsMap . }}
+        {{ $src = .src }}
+        {{ $alt = .alt | default .caption | default "Plurum Residence Bild" }}
+        {{ $caption = .caption | default .alt }}
+      {{ else }}
+        {{ $src = . }}
+        {{ $alt = "Plurum Residence Bild" }}
+      {{ end }}
+      {{ with $src }}
+        <figure>
+          <a href="{{ . }}">
+            <img src="{{ . }}" alt="{{ $alt }}" loading="lazy" />
+          </a>
+          {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+        </figure>
+      {{ end }}
+    {{ end }}
+  </section>
+{{ end }}

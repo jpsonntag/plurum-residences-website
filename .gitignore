@@ -16,3 +16,7 @@ Thumbs.db
 .obsidian/cache/
 .obsidian/plugins/
 .obsidian/graph.json
+
+# Python caches
+__pycache__/
+*.py[cod]

@@ -12,6 +12,7 @@
       {{ with .Params.rent }}<span>{{ . }}</span>{{ end }}
     </div>
     {{ with .Params.highlights }}<div class="chips detailChips">{{ range . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
+    {{ partial "detail-gallery.html" . }}
   {{ end }}
   <article class="prose">
     {{ .Content }}

@@ -21,7 +21,7 @@ Plurum Residences steht für unkompliziertes, modernes Wohnen im Studium: möbli
 ## Scope MVP
 
 - Marketing-Startseite
-- Wohnungs-/Zimmer-Sektion
+- Wohnungs-/Zimmer-Sektion mit Cards, Detailseiten und Bildergalerien
 - klare Kontakt-/Interessentenführung
 - Datenmodell-Vorbereitung für zukünftige Pflege von Wohnungen und Bildern
 - produktive Veröffentlichung unter `https://residences.plurum.de/`; `https://plurum.de/` kann im ersten Schritt auf diese Subdomain weiterleiten

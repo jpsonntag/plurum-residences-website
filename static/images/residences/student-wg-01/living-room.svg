@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Wohnbereich Plurum Pilot-WG</title>
+  <desc id="desc">Abstrakte Illustration eines hellen Wohnbereichs im Plurum-Design.</desc>
+  <rect width="1200" height="800" fill="#F4F1E8"/>
+  <rect x="80" y="80" width="1040" height="640" rx="54" fill="#0D2829" opacity="0.08"/>
+  <rect x="150" y="170" width="900" height="420" rx="34" fill="#0D2829"/>
+  <circle cx="910" cy="260" r="95" fill="#F4F1E8" opacity="0.94"/>
+  <rect x="250" y="420" width="390" height="95" rx="34" fill="#F4F1E8" opacity="0.92"/>
+  <rect x="680" y="395" width="210" height="125" rx="28" fill="#F4F1E8" opacity="0.78"/>
+  <path d="M220 610h760" stroke="#0D2829" stroke-width="18" stroke-linecap="round" opacity="0.28"/>
+  <text x="600" y="675" text-anchor="middle" font-family="system-ui, sans-serif" font-size="42" font-weight="800" fill="#0D2829">Plurum Residence</text>
+</svg>

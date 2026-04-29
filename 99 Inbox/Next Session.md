@@ -4,6 +4,7 @@
 - Plurum Residences Marketing ist eine Hugo-Static-Site mit Docker/Caddy Runtime.
 - Produktive Domain ist `residences.plurum.de`; `plurum.de` kann optional darauf weiterleiten.
 - Businessplan 2.0 wurde extrahiert und marketingrelevant ausgewertet; öffentliche Website-Copy ist stärker auf „Einfach einziehen. Besser ankommen.“, bezugsfertig vorbereitete WG-Zimmer, transparente Informationen und strukturierte Anfrage ausgerichtet.
+- Residences und Rooms können als Markdown-Dateien erstellt werden; sie erscheinen als Cards und haben eigene Detailseiten mit Bildergalerien aus `images`-Frontmatter.
 - Der Marken-Dunkelton ist `#0D2829`.
 - Der abgestimmte helle Ivory-/Weißton ist jetzt `#F4F1E8`; CSS und Hero-SVG sind konsistent darauf umgestellt.
 - Wohnungsbilder werden im MVP statisch mit der Website ausgeliefert und im Docker-Build gebundelt.
