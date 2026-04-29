@@ -1,6 +1,6 @@
 {{ define "main" }}
-{{ $residences := where (where site.RegularPages "Section" "residences") ".Params.status" "ne" "draft" }}
-{{ $rooms := where (where site.RegularPages "Section" "rooms") ".Params.status" "ne" "draft" }}
+{{ $residences := where (where site.Pages ".Params.contentType" "residence") ".Params.status" "ne" "draft" }}
+{{ $rooms := where (where site.RegularPages ".Params.contentType" "room") ".Params.status" "ne" "draft" }}
 
 <section class="hero" id="top">
   <div class="heroCopy">
@@ -63,7 +63,7 @@
 
   <div class="cards residenceGrid">
     {{ range sort $residences ".Params.weight" }}
-      <a class="residenceCard cardLinkBlock" href="{{ .RelPermalink }}" aria-label="Details zu {{ .Title }} ansehen">
+      <a class="residenceCard cardLinkBlock{{ if eq .Params.status "occupied" }} isOccupied{{ end }}" href="{{ .RelPermalink }}" aria-label="Details zu {{ .Title }} ansehen">
         <div class="residenceImage">
           <span>{{ .Params.availability | default (partial "status-label.html" .Params.status) }}</span>
         </div>
@@ -99,7 +99,7 @@
   </div>
   <div class="cards roomGrid">
     {{ range sort $rooms ".Params.weight" }}
-      <a class="roomCard cardLinkBlock" href="{{ .RelPermalink }}" aria-label="Details zu {{ .Title }} ansehen">
+      <a class="roomCard cardLinkBlock{{ if eq .Params.status "occupied" }} isOccupied{{ end }}" href="{{ .RelPermalink }}" aria-label="Details zu {{ .Title }} ansehen">
         <span class="badge">{{ partial "status-label.html" .Params.status }}</span>
         <h3>{{ .Title }}</h3>
         <p>{{ .Params.teaser | default .Summary }}</p>

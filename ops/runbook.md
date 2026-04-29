@@ -50,8 +50,8 @@ npm run docker:up
 
 ## Content-Pflege
 
-- Residences: `content/residences/*.md`
-- Zimmer: `content/rooms/*.md`
+- Residences: `content/residences/<residence-id>/_index.md`
+- Zimmer: `content/residences/<residence-id>/rooms/<room-slug>.md`
 - Legal: `content/impressum.md`, `content/datenschutz.md`
 - Anleitung: `docs/content/how-to-add-residences-and-rooms.md`
 

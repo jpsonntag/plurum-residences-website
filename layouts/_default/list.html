@@ -1,17 +1,37 @@
 {{ define "main" }}
-<section class="section pageContent">
-  <p class="eyebrow">Plurum Residences</p>
-  <h1>{{ .Title }}</h1>
-  <div class="cards residenceGrid">
-    {{ range where .Pages ".Params.status" "ne" "draft" }}
-      <article class="residenceCard">
-        <div class="residenceBody">
-          {{ with .Params.status }}<span class="badge">{{ partial "status-label.html" . }}</span>{{ end }}
-          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          <p>{{ .Params.teaser | default .Summary }}</p>
-        </div>
-      </article>
-    {{ end }}
-  </div>
-</section>
+{{ if eq .Params.contentType "residence" }}
+  <section class="section pageContent">
+    <p class="eyebrow">Residences</p>
+    <h1>{{ .Title }}</h1>
+    <div class="detailMeta">
+      {{ with .Params.status }}<span class="badge">{{ partial "status-label.html" . }}</span>{{ end }}
+      {{ with .Params.city }}<span>{{ . }}</span>{{ end }}
+      {{ with .Params.district }}<span>{{ . }}</span>{{ end }}
+    </div>
+    {{ with .Params.highlights }}<div class="chips detailChips">{{ range . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
+    {{ partial "detail-gallery.html" . }}
+    <article class="prose">
+      {{ .Content }}
+    </article>
+    {{ partial "related-rooms.html" . }}
+    <p class="backLink"><a href="/#zimmer">← Zurück zur Übersicht</a></p>
+  </section>
+{{ else }}
+  <section class="section pageContent">
+    <p class="eyebrow">Plurum Residences</p>
+    <h1>{{ .Title }}</h1>
+    <div class="cards residenceGrid">
+      {{ range sort (where (where site.Pages ".Params.contentType" "residence") ".Params.status" "ne" "draft") ".Params.weight" }}
+        <a class="residenceCard cardLinkBlock{{ if eq .Params.status "occupied" }} isOccupied{{ end }}" href="{{ .RelPermalink }}" aria-label="Details zu {{ .Title }} ansehen">
+          <div class="residenceBody">
+            {{ with .Params.status }}<span class="badge">{{ partial "status-label.html" . }}</span>{{ end }}
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Params.teaser | default .Summary }}</p>
+            <span class="cardLink">Details ansehen</span>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
 {{ end }}

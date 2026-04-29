@@ -1,6 +1,7 @@
 ---
 title: "Plurum Pilot-WG Karlsruhe"
 id: "student-wg-01"
+contentType: "residence"
 status: "available-soon"
 city: "Karlsruhe"
 district: "Campusnah geplant"

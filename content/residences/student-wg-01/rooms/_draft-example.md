@@ -1,6 +1,7 @@
 ---
 title: "Internes Beispielzimmer"
 id: "draft-example-room"
+contentType: "room"
 residenceId: "student-wg-01"
 status: "draft"
 draft: true

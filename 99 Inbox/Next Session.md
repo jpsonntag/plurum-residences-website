@@ -4,7 +4,7 @@
 - Plurum Residences Marketing ist eine Hugo-Static-Site mit Docker/Caddy Runtime.
 - Produktive Domain ist `residences.plurum.de`; `plurum.de` kann optional darauf weiterleiten.
 - Businessplan 2.0 wurde extrahiert und marketingrelevant ausgewertet; öffentliche Website-Copy ist stärker auf „Einfach einziehen. Besser ankommen.“, bezugsfertig vorbereitete WG-Zimmer, transparente Informationen und strukturierte Anfrage ausgerichtet.
-- Residences und Rooms können als Markdown-Dateien erstellt werden; sie erscheinen als Cards und haben eigene Detailseiten mit Bildergalerien aus `images`-Frontmatter.
+- Residences und Rooms können als verschachtelte Markdown-Dateien unter `content/residences/<residence-id>/` erstellt werden; sie erscheinen als Cards und haben eigene Detailseiten mit Bildergalerien aus `images`-Frontmatter. Residence-Detailseiten zeigen ihre zugehörigen Rooms; Room-Detailseiten verlinken zurück zur Residence. Belegte Einträge bleiben sichtbar, werden auf Übersichtsseiten ausgegraut und bleiben anklickbar.
 - Der Marken-Dunkelton ist `#0D2829`.
 - Der abgestimmte helle Ivory-/Weißton ist jetzt `#F4F1E8`; CSS und Hero-SVG sind konsistent darauf umgestellt.
 - Wohnungsbilder werden im MVP statisch mit der Website ausgeliefert und im Docker-Build gebundelt.
@@ -18,7 +18,7 @@
 ## Nächster sinnvoller Einstieg
 1. Finale Kontakt-E-Mail festlegen; Empfehlung bleibt `wohnen@plurum.de` plus Alias `residences@plurum.de`.
 2. Echte Legal-Daten für Impressum/Datenschutz ergänzen und prüfen lassen.
-3. Inhalte in `content/residences/` und `content/rooms/` mit echten Daten/Bildern weiter pflegen.
+3. Inhalte in `content/residences/<residence-id>/_index.md` und `content/residences/<residence-id>/rooms/*.md` mit echten Daten/Bildern weiter pflegen.
 4. Design-Tokens in `assets/css/main.css` nur konsistent über `#0D2829` und `#F4F1E8` weiterentwickeln.
 
 ## Merksatz für den Wiedereinstieg

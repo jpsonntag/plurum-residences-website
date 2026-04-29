@@ -1,6 +1,7 @@
 ---
 title: "Zimmer A — in Vorbereitung"
 id: "student-wg-01-room-a"
+contentType: "room"
 residenceId: "student-wg-01"
 status: "available-soon"
 size: "ca. 14–18 m²"
@@ -11,6 +12,8 @@ images:
   - src: "/images/residences/student-wg-01/room-a.svg"
     alt: "Beispielbild für Zimmer A in der Plurum Pilot-WG"
     caption: "Zimmerbilder können direkt am Room gepflegt werden"
+aliases:
+  - "/rooms/student-wg-01-room-a/"
 weight: 10
 ---
 

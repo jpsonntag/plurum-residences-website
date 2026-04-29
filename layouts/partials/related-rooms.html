@@ -1,0 +1,26 @@
+{{ $rooms := where (where site.RegularPages ".Params.contentType" "room") ".Params.status" "ne" "draft" }}
+{{ $rooms = where $rooms ".Params.residenceId" .Params.id }}
+{{ with $rooms }}
+  <section class="relatedRooms" aria-label="Zimmer in dieser Residence">
+    <div class="sectionHeader compactHeader">
+      <p class="eyebrow">Zimmer</p>
+      <h2>Zimmer in dieser Residence</h2>
+      <p class="sectionLead">Diese Zimmer gehören zu dieser WG. Auch belegte Zimmer bleiben sichtbar, damit Ausstattung und Wohnkonzept nachvollziehbar bleiben.</p>
+    </div>
+    <div class="cards roomGrid relatedRoomGrid">
+      {{ range sort . ".Params.weight" }}
+        <a class="roomCard cardLinkBlock{{ if eq .Params.status "occupied" }} isOccupied{{ end }}" href="{{ .RelPermalink }}" aria-label="Details zu {{ .Title }} ansehen">
+          <span class="badge">{{ partial "status-label.html" .Params.status }}</span>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Params.teaser | default .Summary }}</p>
+          <dl>
+            <div><dt>Größe</dt><dd>{{ .Params.size | default "—" }}</dd></div>
+            <div><dt>Miete</dt><dd>{{ .Params.rent | default "auf Anfrage" }}</dd></div>
+          </dl>
+          {{ with .Params.highlights }}<div class="chips">{{ range . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
+          <span class="cardLink">Details ansehen</span>
+        </a>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

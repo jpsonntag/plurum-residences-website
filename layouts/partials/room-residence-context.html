@@ -1,0 +1,12 @@
+{{ $residenceId := .Params.residenceId }}
+{{ if $residenceId }}
+  {{ $matches := where (where site.Pages ".Params.contentType" "residence") ".Params.id" $residenceId }}
+  {{ with index $matches 0 }}
+    <aside class="contextCard" aria-label="Residence-Kontext">
+      <p class="eyebrow">Teil von</p>
+      <h2>{{ .Title }}</h2>
+      <p>{{ .Params.teaser | default .Summary }}</p>
+      <a class="cardLink" href="{{ .RelPermalink }}">Residence ansehen</a>
+    </aside>
+  {{ end }}
+{{ end }}

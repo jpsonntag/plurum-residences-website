@@ -1,6 +1,7 @@
 ---
 title: "Weitere Residences in Planung"
 id: "student-wg-02"
+contentType: "residence"
 status: "draft"
 draft: true
 city: "Weitere Städte"

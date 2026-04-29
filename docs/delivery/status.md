@@ -9,7 +9,7 @@ Die produktive Ziel-Domain ist `https://residences.plurum.de/`; `https://plurum.
 
 - Hugo-Projekt ohne Theme-Abhängigkeit
 - hochwertige Landingpage im Plurum-Residences-Look
-- Markdown-Content-Modell für `content/residences/*.md` und `content/rooms/*.md` inklusive Cards, Detailseiten und Bildergalerien
+- Markdown-Content-Modell mit verschachtelter Residence-/Zimmer-Struktur unter `content/residences/<residence-id>/` inklusive Cards, Detailseiten und Bildergalerien
 - echte Legal-Pfade `/impressum/` und `/datenschutz/` mit Platzhaltertexten
 - Docker-Multistage-Build mit Hugo und Caddy-Runtime
 - statische Auslieferung von Wohnungsbildern im Docker-Build als MVP-Strategie

@@ -7,7 +7,7 @@ Ziel: Möblierte WG-Zimmer für Studierende hochwertig präsentieren und Residen
 ## Status
 
 - Hugo-Site mit eigenem Layout und CSS
-- Markdown-Content-Modell für `content/residences/*.md` und `content/rooms/*.md`
+- Markdown-Content-Modell mit verschachtelter Residence-/Zimmer-Struktur unter `content/residences/<residence-id>/`
 - echte Legal-Pfade `/impressum/` und `/datenschutz/` mit Platzhaltern
 - Docker-Multistage-Build: Hugo baut statische Dateien, Caddy served sie auf Port 80
 
@@ -17,9 +17,9 @@ Siehe `docs/content/how-to-add-residences-and-rooms.md`.
 
 Kurzfassung:
 
-- Residences: `content/residences/*.md`
-- Zimmer: `content/rooms/*.md`
-- Zimmer referenzieren ihre Residence per `residenceId`
+- Residences: `content/residences/<residence-id>/_index.md`
+- Zimmer: `content/residences/<residence-id>/rooms/<room-slug>.md`
+- Zimmer referenzieren ihre Residence zusätzlich per `residenceId`
 - Statuswerte: `draft`, `planned`, `available-soon`, `available`, `reserved`, `occupied`
 - Entwürfe zusätzlich mit `draft: true` markieren; normale Produktions-Builds rendern sie nicht.
 

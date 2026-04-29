@@ -17,7 +17,7 @@
 
 - Hugo Static Site ohne Theme-Abhängigkeit
 - Docker-Multistage-Build mit Hugo und Caddy
-- Markdown-Content in `content/residences/`, `content/rooms/`, `content/impressum.md`, `content/datenschutz.md`
+- Markdown-Content in `content/residences/<residence-id>/_index.md`, `content/residences/<residence-id>/rooms/*.md`, `content/impressum.md`, `content/datenschutz.md`
 - Logo aus dem bestehenden Plurum-Residences/Plurum-Rent Repo übernommen
 
 ## Markenrichtung
