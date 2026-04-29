@@ -1,10 +1,10 @@
-baseURL = "https://plurum.de/"
+baseURL = "https://residences.plurum.de/"
 languageCode = "de-de"
 title = "Plurum Residences"
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  description = "Möblierte WG-Zimmer für Studierende: Plurum Residences bietet klare Informationen, gepflegte Wohnungen und einen einfachen Anfrageprozess bis zum Einzug."
+  description = "Möblierte WG-Zimmer für Studierende: Plurum Residences bietet bezugsfertig vorbereitete Zimmer, klare Informationen und einen strukturierten Anfrageprozess bis zum Einzug."
   contactEmail = "hello@plurum.de"
 
 [markup]

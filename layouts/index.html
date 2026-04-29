@@ -5,13 +5,13 @@
 <section class="hero" id="top">
   <div class="heroCopy">
     <p class="eyebrow">Möblierte WG-Zimmer für Studierende</p>
-    <h1>Einfacher wohnen. Besser ankommen.</h1>
+    <h1>Einfach einziehen. Besser ankommen.</h1>
     <p class="lead">
-      Plurum Residences vermittelt möblierte WG-Zimmer in gepflegten Wohnungen — mit klaren Informationen, strukturierter Anfrage und verlässlicher Kommunikation bis zum Einzug.
+      Plurum Residences bietet möblierte WG-Zimmer für Studierende — bezugsfertig vorbereitet, klar beschrieben und mit einem strukturierten Anfrageprozess bis zum Einzug.
     </p>
     <div class="actions">
       <a class="button primary" href="#zimmer">Zimmer ansehen</a>
-      <a class="button secondary" href="mailto:{{ site.Params.contactEmail }}">Interesse anmelden</a>
+      <a class="button secondary" href="mailto:{{ site.Params.contactEmail }}">Früh vormerken</a>
     </div>
   </div>
 
@@ -23,9 +23,9 @@
     <div class="brandScene">
       <div class="brandHalo"></div>
       <img class="brandMarkLarge" src="/plurum-logo.png" alt="Plurum Logo" />
-      <div class="brandPill one">Möbliert</div>
+      <div class="brandPill one">Bezugsfertig</div>
       <div class="brandPill two">Klare Anfrage</div>
-      <div class="brandPill three">Gepflegte WGs</div>
+      <div class="brandPill three">Möblierte WGs</div>
     </div>
     <div class="availabilityCard">
       <span class="pulse"></span>
@@ -39,16 +39,16 @@
 
 <section class="trustStrip" aria-label="Plurum Versprechen">
   <article>
-    <strong>Möbliert einziehen</strong>
-    <span>Zimmer mit sinnvoller Grundausstattung, damit der Start in Studium und Alltag leichter wird.</span>
+    <strong>Bezugsfertig vorbereitet</strong>
+    <span>Möbel, Grundausstattung und wichtige Details sind vor dem Einzug geklärt.</span>
   </article>
   <article>
-    <strong>Klar anfragen</strong>
-    <span>Alle relevanten Angaben werden strukturiert aufgenommen — ohne endlose Nachrichtenschleifen.</span>
+    <strong>Transparent kalkulieren</strong>
+    <span>Informationen zu Miete, Ausstattung, Verfügbarkeit und nächsten Schritten werden klar dargestellt.</span>
   </article>
   <article>
-    <strong>Verlässlich begleitet</strong>
-    <span>Transparente Kommunikation vom ersten Interesse bis zur Übergabe.</span>
+    <strong>Strukturiert anfragen</strong>
+    <span>Deine wichtigsten Angaben werden gesammelt aufgenommen — ohne endlose Nachrichtenschleifen.</span>
   </article>
 </section>
 
@@ -86,7 +86,7 @@
     {{ else }}
       <article class="emptyCard">
         <h3>Residences werden vorbereitet</h3>
-        <p>Die ersten Wohnungen werden aktuell redaktionell aufbereitet. Neue Einträge entstehen in <code>content/residences/</code>.</p>
+        <p>Die ersten Wohnungen werden aktuell vorbereitet. Trage dich ein, wenn du frühzeitig Informationen zu Lage, Ausstattung und Verfügbarkeit erhalten möchtest.</p>
       </article>
     {{ end }}
   </div>
@@ -94,7 +94,7 @@
   <div class="sectionHeader roomHeader">
     <p class="eyebrow">Zimmer</p>
     <h2>Zimmer im Überblick</h2>
-    <p class="sectionLead">Die Zimmer werden aus Markdown-Dateien in <code>content/rooms/</code> erzeugt und über <code>residenceId</code> einer Residence zugeordnet.</p>
+    <p class="sectionLead">Konkrete Zimmer erscheinen hier, sobald Größe, Mietrahmen, Ausstattung und Verfügbarkeit final genug für die öffentliche Startseite sind.</p>
   </div>
   <div class="cards roomGrid">
     {{ range sort $rooms ".Params.weight" }}
@@ -112,7 +112,7 @@
     {{ else }}
       <article class="emptyCard">
         <h3>Zimmer werden vorbereitet</h3>
-        <p>Konkrete Zimmer erscheinen hier, sobald die Daten final genug für die öffentliche Startseite sind. Entwürfe können bereits als Markdown-Dateien vorbereitet werden.</p>
+        <p>Wir veröffentlichen Zimmer erst, wenn die wichtigsten Angaben geprüft sind. Bis dahin kannst du dich früh vormerken lassen.</p>
       </article>
     {{ end }}
   </div>
@@ -121,16 +121,16 @@
 <section class="darkSection" id="warum">
   <div class="sectionHeader narrow">
     <p class="eyebrow light">Warum Plurum Residences</p>
-    <h2>Mehr Überblick beim WG-Suchen.</h2>
+    <h2>Weniger Aufwand beim WG-Suchen. Mehr Klarheit beim Einziehen.</h2>
     <p class="sectionLead lightLead">
-      Ein Zimmer zu finden sollte nicht an unklaren Informationen, verstreuten Nachrichten oder fehlender Transparenz scheitern. Plurum Residences bündelt die wichtigsten Details und macht den Weg zur Anfrage einfacher.
+      Die Wohnungssuche im Studium ist oft schnell, unübersichtlich und stressig. Plurum Residences bündelt möblierte WG-Zimmer mit klaren Informationen, vorbereiteter Ausstattung und einem nachvollziehbaren Anfrageprozess.
     </p>
   </div>
   <div class="benefitGrid">
-    <article class="benefit"><span>01</span><h3>Klare Informationen</h3><p>Ausstattung, Lage, Status und Ablauf werden so früh wie möglich verständlich dargestellt.</p></article>
-    <article class="benefit"><span>02</span><h3>Bereit für den Alltag</h3><p>Möblierte Zimmer schaffen eine stabile Basis für Lernen, Leben und Ankommen.</p></article>
-    <article class="benefit"><span>03</span><h3>Gepflegte Wohnumgebung</h3><p>Der Fokus liegt auf ordentlich vorbereiteten Wohnungen statt anonymen Inseraten.</p></article>
-    <article class="benefit"><span>04</span><h3>Strukturierter Prozess</h3><p>Von der Anfrage bis zur Rückmeldung gibt es klare nächste Schritte.</p></article>
+    <article class="benefit"><span>01</span><h3>Einziehen statt einrichten</h3><p>Möblierte Zimmer sparen Möbelkauf, Transport und viel Organisationsaufwand.</p></article>
+    <article class="benefit"><span>02</span><h3>Klare Kosten vorab</h3><p>Mietrahmen, Ausstattung und Verfügbarkeit werden transparent kommuniziert, sobald sie final geprüft sind.</p></article>
+    <article class="benefit"><span>03</span><h3>Vorbereitete Wohnumgebung</h3><p>Gepflegte Wohnungen mit funktionaler Ausstattung für Lernen, Alltag und WG-Leben.</p></article>
+    <article class="benefit"><span>04</span><h3>Einfacher Anfrageprozess</h3><p>Deine wichtigsten Angaben werden strukturiert aufgenommen und nachvollziehbar bearbeitet.</p></article>
   </div>
 </section>
 
@@ -138,13 +138,13 @@
   <div>
     <p class="eyebrow">So funktioniert’s</p>
     <h2>Vom ersten Interesse bis zum Einzug — klar geführt.</h2>
-    <p class="sectionLead">Der Ablauf ist bewusst einfach gehalten: schnell verstehen, ob ein Zimmer passt, Interesse anmelden und die nächsten Schritte sauber klären.</p>
+    <p class="sectionLead">Der Ablauf ist bewusst einfach gehalten: schnell verstehen, ob ein Zimmer passt, Interesse vormerken und die nächsten Schritte sauber klären.</p>
   </div>
   <ol class="steps">
-    <li><span class="stepNum">01</span><strong>Angebot entdecken</strong><span>Sieh dir verfügbare und kommende WG-Zimmer mit Ausstattung, Lageinformationen und Status an.</span></li>
-    <li><span class="stepNum">02</span><strong>Interesse anmelden</strong><span>Übermittle deine Anfrage mit den wichtigsten Angaben zu dir, deinem Studienstart und deinem gewünschten Zeitraum.</span></li>
-    <li><span class="stepNum">03</span><strong>Rückmeldung erhalten</strong><span>Wir prüfen die Anfrage und melden uns mit den nächsten Schritten — transparent und direkt.</span></li>
-    <li><span class="stepNum">04</span><strong>Einziehen</strong><span>Wenn alles passt, erhältst du eine klare Übergabe und ein vorbereitetes Zimmer für deinen Start.</span></li>
+    <li><span class="stepNum">01</span><strong>Zimmer entdecken</strong><span>Vergleiche verfügbare und kommende WG-Zimmer mit Ausstattung, Lageinformationen und Status.</span></li>
+    <li><span class="stepNum">02</span><strong>Interesse vormerken</strong><span>Übermittle deine Anfrage mit den wichtigsten Angaben zu dir, deinem Studienstart und deinem gewünschten Zeitraum.</span></li>
+    <li><span class="stepNum">03</span><strong>Rückmeldung erhalten</strong><span>Wir prüfen Verfügbarkeit und Passung und melden uns mit den nächsten Schritten — transparent und direkt.</span></li>
+    <li><span class="stepNum">04</span><strong>Vorbereitet einziehen</strong><span>Wenn alles passt, ziehst du in ein möbliertes Zimmer mit klarer Übergabe ein.</span></li>
   </ol>
 </section>
 
@@ -155,15 +155,16 @@
     <p>Plurum Residences richtet sich an Studierende, die ein möbliertes Zimmer in einer gut organisierten WG suchen. Transparente Informationen, strukturierte Abläufe und verlässliche Kommunikation machen den Prozess auch für Eltern nachvollziehbar.</p>
   </div>
   <div class="audiencePanels">
-    <article><h3>Für Studierende</h3><ul><li>möblierte Zimmer</li><li>einfache Anfrage</li><li>schneller Überblick</li><li>weniger organisatorischer Aufwand</li></ul></article>
+    <article><h3>Für Studierende</h3><ul><li>möblierte Zimmer</li><li>weniger Organisationsaufwand</li><li>schneller Überblick</li><li>strukturierte Anfrage</li></ul></article>
     <article><h3>Auch für Eltern nachvollziehbar</h3><ul><li>transparenter Ablauf</li><li>gepflegte Wohnumgebung</li><li>klare Kommunikation</li><li>seriöser Markenauftritt</li></ul></article>
+    <article><h3>Für Eigentümer perspektivisch</h3><ul><li>professioneller Ansprechpartner</li><li>langfristig angelegte Zusammenarbeit</li><li>weniger Verwaltungsaufwand</li><li>standardisierte Wohnqualität</li></ul></article>
   </div>
 </section>
 
 <section class="cta" id="kontakt">
-  <p class="eyebrow light">Interesse anmelden</p>
+  <p class="eyebrow light">Interesse vormerken</p>
   <h2>Suchst du ein möbliertes WG-Zimmer?</h2>
-  <p>Melde dich bei Plurum Residences, wenn du dich für aktuelle oder kommende Zimmer interessierst. Wir informieren dich über Verfügbarkeit, Ausstattung und die nächsten Schritte.</p>
-  <a class="button primary lightButton" href="mailto:{{ site.Params.contactEmail }}">Interesse anmelden</a>
+  <p>Melde dich bei Plurum Residences, wenn du dich für aktuelle oder kommende Zimmer interessierst. Wir informieren dich über Verfügbarkeit, Ausstattung, Mietrahmen und die nächsten Schritte.</p>
+  <a class="button primary lightButton" href="mailto:{{ site.Params.contactEmail }}">Früh vormerken</a>
 </section>
 {{ end }}

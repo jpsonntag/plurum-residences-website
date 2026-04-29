@@ -15,6 +15,17 @@ Erlaubte `status`-Werte:
 
 Normale Produktions-Builds (`hugo` ohne `--buildDrafts`) rendern Hugo-Entwürfe mit `draft: true` nicht.
 
+## Bilder im MVP
+
+Wohnungs- und Zimmerbilder werden im ersten Schritt als statische Assets mit der Website ausgeliefert und dadurch im Docker-Build gebundelt. Das hält Deployment und Betrieb einfach; ein späterer Wechsel zu externem Asset Storage, CMS oder App-Upload bleibt möglich.
+
+Empfohlene Ablage:
+
+- allgemeine Website-/Brand-Assets: `static/`
+- Residence- und Zimmerbilder: `static/images/residences/<residence-id>/`
+
+Beispielpfad: `static/images/residences/beispielstrasse-01/zimmer-1.webp`.
+
 ## Neue Residence anlegen
 
 Datei unter `content/residences/meine-residence.md` erstellen:
