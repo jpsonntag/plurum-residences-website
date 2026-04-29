@@ -3,18 +3,18 @@
   <desc id="desc">A calm abstract interior scene in Plurum brand colors with soft daylight, architectural lines, plants, desk and bed silhouettes.</desc>
   <defs>
     <linearGradient id="room" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#E8D6A3"/>
-      <stop offset="0.55" stop-color="#E9E5D1"/>
-      <stop offset="1" stop-color="#C9D0C1"/>
+      <stop offset="0" stop-color="#F4F1E8"/>
+      <stop offset="0.55" stop-color="#ECE7DA"/>
+      <stop offset="1" stop-color="#D9DED5"/>
     </linearGradient>
     <linearGradient id="dark" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0D2829"/>
       <stop offset="1" stop-color="#183C3D"/>
     </linearGradient>
     <radialGradient id="light" cx="0.72" cy="0.22" r="0.62">
-      <stop offset="0" stop-color="#E8D6A3" stop-opacity="0.98"/>
-      <stop offset="0.42" stop-color="#E8D6A3" stop-opacity="0.42"/>
-      <stop offset="1" stop-color="#E8D6A3" stop-opacity="0"/>
+      <stop offset="0" stop-color="#F4F1E8" stop-opacity="0.98"/>
+      <stop offset="0.42" stop-color="#F4F1E8" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#F4F1E8" stop-opacity="0"/>
     </radialGradient>
     <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="34" stdDeviation="34" flood-color="#0D2829" flood-opacity="0.16"/>
@@ -37,22 +37,22 @@
 
   <!-- window/daylight -->
   <g filter="url(#softShadow)">
-    <rect x="1060" y="120" width="456" height="520" rx="44" fill="#E8D6A3" opacity="0.82"/>
-    <rect x="1102" y="166" width="168" height="428" rx="28" fill="#DDE3D6" opacity="0.88"/>
-    <rect x="1308" y="166" width="166" height="428" rx="28" fill="#DDE3D6" opacity="0.88"/>
+    <rect x="1060" y="120" width="456" height="520" rx="44" fill="#F4F1E8" opacity="0.82"/>
+    <rect x="1102" y="166" width="168" height="428" rx="28" fill="#EEF2EA" opacity="0.88"/>
+    <rect x="1308" y="166" width="166" height="428" rx="28" fill="#EEF2EA" opacity="0.88"/>
     <path d="M1288 150 L1288 610" stroke="#0D2829" stroke-opacity="0.18" stroke-width="5"/>
   </g>
 
   <!-- soft art/logo frame -->
   <g transform="translate(214 188)" filter="url(#softShadow)">
-    <rect width="266" height="266" rx="44" fill="#E8D6A3" opacity="0.78"/>
+    <rect width="266" height="266" rx="44" fill="#F4F1E8" opacity="0.78"/>
     <path d="M70 170 L133 82 L196 170" fill="none" stroke="#0D2829" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" opacity="0.82"/>
     <path d="M96 170 L133 118 L170 170" fill="none" stroke="#0D2829" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
   </g>
 
   <!-- bed / lounge shape -->
   <g filter="url(#softShadow)">
-    <rect x="236" y="706" width="740" height="230" rx="58" fill="#E8D6A3" opacity="0.9"/>
+    <rect x="236" y="706" width="740" height="230" rx="58" fill="#F4F1E8" opacity="0.9"/>
     <rect x="300" y="646" width="284" height="128" rx="44" fill="#0D2829" opacity="0.12"/>
     <rect x="600" y="644" width="244" height="126" rx="42" fill="#0D2829" opacity="0.09"/>
     <path d="M242 824 L980 824" stroke="#0D2829" stroke-opacity="0.24" stroke-width="8" stroke-linecap="round"/>
@@ -63,7 +63,7 @@
     <rect x="1074" y="740" width="512" height="38" rx="19" fill="url(#dark)" opacity="0.9"/>
     <rect x="1148" y="778" width="34" height="196" rx="17" fill="#0D2829" opacity="0.72"/>
     <rect x="1484" y="778" width="34" height="196" rx="17" fill="#0D2829" opacity="0.72"/>
-    <rect x="1204" y="676" width="176" height="64" rx="24" fill="#E8D6A3" opacity="0.82"/>
+    <rect x="1204" y="676" width="176" height="64" rx="24" fill="#F4F1E8" opacity="0.82"/>
   </g>
 
   <!-- plant -->
@@ -71,7 +71,7 @@
     <path d="M70 264 C42 196 44 126 90 44 C132 128 124 202 70 264Z" fill="#0D2829" opacity="0.42"/>
     <path d="M92 264 C104 190 154 126 236 86 C230 176 176 238 92 264Z" fill="#0D2829" opacity="0.34"/>
     <path d="M60 264 C22 222 4 166 24 98 C82 144 98 206 60 264Z" fill="#0D2829" opacity="0.28"/>
-    <rect x="42" y="258" width="132" height="118" rx="28" fill="#E8D6A3" opacity="0.9" filter="url(#softShadow)"/>
+    <rect x="42" y="258" width="132" height="118" rx="28" fill="#F4F1E8" opacity="0.9" filter="url(#softShadow)"/>
   </g>
 
   <!-- foreground depth overlays -->
