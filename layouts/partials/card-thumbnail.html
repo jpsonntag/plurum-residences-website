@@ -1,0 +1,18 @@
+{{ $thumbnail := "" }}
+{{ with .Params.thumbnail }}
+  {{ if reflect.IsMap . }}
+    {{ $thumbnail = .src }}
+  {{ else }}
+    {{ $thumbnail = . }}
+  {{ end }}
+{{ else }}
+  {{ with .Params.images }}
+    {{ $first := index . 0 }}
+    {{ if reflect.IsMap $first }}
+      {{ $thumbnail = $first.src }}
+    {{ else }}
+      {{ $thumbnail = $first }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return $thumbnail }}

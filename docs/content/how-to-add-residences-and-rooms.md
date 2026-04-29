@@ -100,6 +100,7 @@ rooms: 4
 availability: "Bald verfügbar"
 teaser: "Kurzer Text für Startseite und Übersichten."
 highlights: ["Möbliert", "Gepflegte Wohnung", "Gute Anbindung"]
+thumbnail: "/images/residences/beispielstrasse-01/living-room.webp"
 images:
   - src: "/images/residences/beispielstrasse-01/living-room.webp"
     alt: "Wohnbereich der WG Beispielstraße"
@@ -120,7 +121,17 @@ Ausführlicher Beschreibungstext für die Detailseite.
 - klare Informationen zu Mietrahmen und Verfügbarkeit
 ```
 
-### 4. Ergebnis prüfen
+### 4. Thumbnail festlegen
+
+Optional kann das Card-Thumbnail der Residence explizit gesetzt werden:
+
+```yaml
+thumbnail: "/images/residences/beispielstrasse-01/living-room.webp"
+```
+
+Wenn `thumbnail` fehlt, nutzt die Startseite automatisch das erste Bild aus `images`. Wenn weder `thumbnail` noch `images` gesetzt sind, bleibt die grafische Standardfläche sichtbar.
+
+### 5. Ergebnis prüfen
 
 Die Residence erscheint automatisch:
 
@@ -327,7 +338,7 @@ python scripts/verify_detail_pages.py
 - [ ] Jedes Zimmer hat `contentType: "room"`.
 - [ ] `residenceId` jedes Zimmers passt exakt zur `id` der Residence.
 - [ ] Bilder liegen unter `static/images/residences/<residence-id>/`.
-- [ ] Bildpfade in Frontmatter beginnen mit `/images/residences/...`.
+- [ ] Optionales Residence-Thumbnail ist über `thumbnail: "/images/residences/<residence-id>/<dateiname>"` gesetzt oder das erste `images`-Bild ist als Fallback geeignet.
 - [ ] Jedes Bild hat ein sinnvolles `alt`.
 - [ ] Status ist korrekt gesetzt.
 - [ ] Entwürfe haben zusätzlich `draft: true`.

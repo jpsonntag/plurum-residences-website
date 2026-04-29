@@ -63,8 +63,9 @@
 
   <div class="cards residenceGrid">
     {{ range sort $residences ".Params.weight" }}
+      {{ $thumbnail := partial "card-thumbnail.html" . }}
       <a class="residenceCard cardLinkBlock{{ if eq .Params.status "occupied" }} isOccupied{{ end }}" href="{{ .RelPermalink }}" aria-label="Details zu {{ .Title }} ansehen">
-        <div class="residenceImage">
+        <div class="residenceImage{{ with $thumbnail }} hasThumbnail{{ end }}"{{ with $thumbnail }} style="background-image: linear-gradient(180deg, rgba(13,40,41,.08), rgba(13,40,41,.58)), url('{{ . }}');"{{ end }}>
           <span>{{ .Params.availability | default (partial "status-label.html" .Params.status) }}</span>
         </div>
         <div class="residenceBody">
