@@ -21,7 +21,7 @@
 - Aktuelle Datenbasis liegt in `data/properties.ts` und enthält nur `residences`.
 - Aktuelle Hero-Grafik nennt „Residence preview“ und simuliert eine Zimmer-/Residence-Preview. Laut JP wird das für den ersten Livegang nicht benötigt.
 - Footer enthält Platzhalterlinks für Impressum/Datenschutz (`href="#"`). Für Livegang müssen echte rechtliche Seiten oder externe Ziel-URLs vorhanden sein.
-- Kontakt läuft aktuell über `mailto:hello@plurum.de`; die finale Kontaktadresse muss bestätigt werden.
+- Kontakt läuft aktuell über `mailto:info@plurum.de`; die finale Kontaktadresse muss bestätigt werden.
 
 ## Live-Readiness Definition
 
@@ -264,7 +264,7 @@ git commit -m "feat: replace residence preview hero"
 1. Platzhalterseiten für Impressum und Datenschutz anlegen, falls finale Texte noch fehlen.
 2. Wenn finale Inhalte fehlen, sichtbar als „Angaben folgen vor Livegang“ markieren und diese Seiten nicht als live-ready abhaken.
 3. Footer-Links auf `/impressum` und `/datenschutz` ändern.
-4. Kontakt-Link aus `data/site.ts` ziehen statt hart codiert mehrfach `mailto:hello@plurum.de` zu nutzen.
+4. Kontakt-Link aus `data/site.ts` ziehen statt hart codiert mehrfach `mailto:info@plurum.de` zu nutzen.
 
 **Verification:**
 ```bash
@@ -341,7 +341,7 @@ git commit -m "feat: finalize seo metadata"
 4. In `docs/delivery/status.md` notieren, dass Formular/CMS später kommen kann, aber nicht Teil des ersten Livegangs ist.
 
 **Verification:**
-- Suchlauf: `hello@plurum.de` darf nur noch in `data/site.ts` oder gar nicht vorkommen.
+- Suchlauf: `info@plurum.de` darf nur noch in `data/site.ts` oder gar nicht vorkommen.
 - Alle CTA-Links zeigen auf dieselbe finale Adresse.
 
 **Commit:**

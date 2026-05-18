@@ -5,7 +5,7 @@ disableKinds = ["taxonomy", "term"]
 
 [params]
   description = "Möblierte WG-Zimmer für Studierende: Plurum Residences bietet bezugsfertig vorbereitete Zimmer, klare Informationen und einen strukturierten Anfrageprozess bis zum Einzug."
-  contactEmail = "hello@plurum.de"
+  contactEmail = "info@plurum.de"
 
 [markup]
   [markup.goldmark]

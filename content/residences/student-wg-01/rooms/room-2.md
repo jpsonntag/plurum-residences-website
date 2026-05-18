@@ -3,10 +3,10 @@ title: "Zimmer 2 — belegt"
 id: "student-wg-01-room-2"
 contentType: "room"
 residenceId: "student-wg-01"
-status: "occupied"
+status: "available-soon"
 size: "wird ergänzt"
-rent: "auf Anfrage"
-teaser: "Dieses Zimmer ist aktuell belegt. Du kannst die Details weiterhin ansehen, um Ausstattung, Wohnkonzept und spätere Vergleichswerte nachzuvollziehen."
+rent: "350€ + 150€ (Nebenkosten)"
+teaser: "Dieses Zimmer wird bald frei. Du kannst die Details weiterhin ansehen, um Ausstattung, Wohnkonzept und spätere Vergleichswerte nachzuvollziehen."
 highlights: ["Aktuell belegt", "Möbliert", "Details sichtbar"]
 thumbnail: "/images/residences/student-wg-01/zimmer-2-1.jpg"
 images:

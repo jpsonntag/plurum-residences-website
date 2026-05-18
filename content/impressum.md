@@ -5,19 +5,50 @@ description: "Impressum von Plurum Residences."
 
 # Impressum
 
-**Plurum Residences**
-
-> Platzhalter: Die finalen gesetzlichen Anbieterangaben müssen vor Veröffentlichung ergänzt und juristisch geprüft werden.
-
 ## Angaben gemäß § 5 DDG
 
-- Anbieter/Firma: **[bitte ergänzen]**
-- Vertretungsberechtigte Person: **[bitte ergänzen]**
-- Anschrift: **[bitte ergänzen]**
-- E-Mail: [hello@plurum.de](mailto:hello@plurum.de)
-- Telefon: **[bitte ergänzen, falls erforderlich]**
-- Registereintrag/USt-ID: **[bitte ergänzen, falls vorhanden/erforderlich]**
+**Plurum UG (haftungsbeschränkt)**  
 
-## Verantwortlich für den Inhalt
+Landstraße 69  
 
-**[bitte ergänzen]**
+76571, Gaggenau  
+
+Deutschland
+
+Vertreten durch die Geschäftsführer:  
+
+Kassim Quissua und Jan-Philipp Sonntag
+
+E-Mail: [info@plurum.de](mailto:info@plurum.de)
+
+Registergericht: Amtsgericht Mannheim  
+
+Handelsregisternummer: HRB 754257
+
+## Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+
+Jan-Philipp Sonntag  
+
+c/o Plurum UG (haftungsbeschränkt)  
+
+Landstraße 69  
+
+76571, Gaggenau  
+
+Deutschland
+
+## Verbraucherstreitbeilegung
+
+Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+
+## Haftung für Inhalte
+
+Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir jedoch keine Gewähr.
+
+## Haftung für Links
+
+Unser Angebot kann Links zu externen Websites Dritter enthalten, auf deren Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte übernehmen wir keine Gewähr. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+
+## Urheberrecht
+
+Die auf dieser Website erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung oder sonstige Nutzung außerhalb der Grenzen des Urheberrechts bedürfen der vorherigen schriftlichen Zustimmung des jeweiligen Rechteinhabers.
